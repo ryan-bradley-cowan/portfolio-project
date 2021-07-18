@@ -1,0 +1,51 @@
+1. start website dev mode
+cd Desktop/
+django-admin startproject wordcount-project
+cd wordcount-project/
+python3 manage.py runserver
+
+
+2. git terminal instructions:
+cd Desktop/
+cd wordcount-project/
+git init *starts a git session
+git status *tells which files are not committed
+git add -A *gets files ready to commit
+git status
+git commit -m "This is my first commit" *commits file
+
+create github repo
+
+git remote add origin https://github.com/ryan-bradley-cowan/wordcount-project.git
+git push -u origin master
+git config --global user.name "Ryan Bradley Cowan"
+git config --global user.email ryan.bradley.cowan@gmail.com
+
+
+3. create virtual environment (this should be activated before doing step 1 and 2)
+pip3 install virtualenv
+cd Desktop/
+virtualenv myvenv
+source myvenv/bin/activate *to navigate into virtual environment
+pip install django
+
+4. .gitignore file templates
+https://www.toptal.com/developers/gitignore
+
+5. apps (in terminal)
+python manage.py startapp blog
+python manage.py startapp jobs
+
+6. model fields for django
+https://docs.djangoproject.com/en/3.2/ref/models/fields/
+
+7. migrations
+first tell python we have a new app for db. go to settings.py INSTALLED_APPS and add app
+pip install pillow *needed to work with images
+pyhton manage.py migrate
+python manage.py makemigrations *see migrations.0001_initial.py for db code
+pyhton manage.py migrate
+
+8. admin url superuser
+python manage.py createsuperuser
+then go to admin page localhost:8000/admin and log in with credentials
