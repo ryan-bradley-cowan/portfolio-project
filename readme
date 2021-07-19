@@ -42,10 +42,21 @@ https://docs.djangoproject.com/en/3.2/ref/models/fields/
 7. migrations
 first tell python we have a new app for db. go to settings.py INSTALLED_APPS and add app
 pip install pillow *needed to work with images
-pyhton manage.py migrate
+python manage.py migrate
 python manage.py makemigrations *see migrations.0001_initial.py for db code
-pyhton manage.py migrate
+python manage.py migrate
 
 8. admin url superuser
 python manage.py createsuperuser
 then go to admin page localhost:8000/admin and log in with credentials
+
+9. postgres
+launch postgres app and select database to launch terminal
+\du *shows database users
+\password postgres *set up password for postgres
+CREATE DATABASE portfoliodb; *creates database for portfolio project
+
+go to settings to setup database
+
+navigate to virtual environment portfolio-project and do pip install psycopg2-binary
+
