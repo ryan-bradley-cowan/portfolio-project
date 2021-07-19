@@ -38,11 +38,16 @@ python manage.py startapp jobs
 
 6. model fields for django
 https://docs.djangoproject.com/en/3.2/ref/models/fields/
+steps
+a) create model in app
+b) add app to the settings (exact wording from apps.py xxxConfig)
+c) create migrations
+d) migrate
+e) add to admin
 
 7. migrations
 first tell python we have a new app for db. go to settings.py INSTALLED_APPS and add app
 pip install pillow *needed to work with images
-python manage.py migrate
 python manage.py makemigrations *see migrations.0001_initial.py for db code
 python manage.py migrate
 
