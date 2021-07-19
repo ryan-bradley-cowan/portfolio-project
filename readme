@@ -36,6 +36,8 @@ https://www.toptal.com/developers/gitignore
 python manage.py startapp blog
 python manage.py startapp jobs
 
+if using import jobs.views then can place templates folder directly in job folder (no need to alter settings)
+
 6. model fields for django
 https://docs.djangoproject.com/en/3.2/ref/models/fields/
 steps
