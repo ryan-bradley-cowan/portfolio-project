@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
-def home(request):
+#required to convert postgresql to python objects
+from .models import Job
 
-    return render(request, 'jobs/home.html')
+def home(request):
+    jobs = Job.objects #converts postgresql to python objects
+    return render(request, 'jobs/home.html', {'jobs':jobs})
